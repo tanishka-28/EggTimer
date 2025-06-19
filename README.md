@@ -1,5 +1,4 @@
 # EggTimer
-Absolutely! Here's a clean, beginner-friendly **README.md** description you can use for your Egg Timer project:
 
 ---
 
@@ -21,9 +20,9 @@ A fun and interactive web-based **Egg Timer** that helps users boil the perfect 
 ---
 
 ### 🚀 Live Demo
+https://tanishka-28.github.io/EggTimer/
 
-[👉 Click here to try it](https://yourusername.github.io/eggtimer/)
-*(Replace with your actual GitHub Pages link)*
+
 
 ---
 
