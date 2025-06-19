@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> EggTimer </title>
+        <link rel="stylesheet" href="tp.css">
+        <link rel="icon" href="egg.png">
+    </head>
+    <body>
+        <div class="header-container">
+            <img src="egg.png" alt="Logo" class="logo">
+            <h1>Welcome to the Egg Timer!</h1>
+          </div>
+        <h2>No more burning or overcooking the Eggs</h2>
+        <h4> Select the egg according to your preference to start the Timer.....Tik..Tik..</h4>
+       
+        <div class="image-row">
+            <div class="egg-type">
+            <img src="soft.png" alt="soft boiled egg" class="gallery-image">
+            <p>Soft Boiled -- 5mins</p>
+            <button class="timer-button" onclick="startTimer(300, 'timer1')">Start Timer</button>
+            <button class="stop-button" onclick="stopTimer('timer1')">Stop</button>
+            <p id="timer1" class="timer-display">05:00</p>
+            </div>
+            <div class="egg-type">
+            <img src="med.png" alt="medium boiled egg" class="gallery-image">
+            <p>Medium Boiled--7mins</p>
+            <button class="timer-button" onclick="startTimer(420, 'timer2')">Start Timer</button>
+            <button class="stop-button" onclick="stopTimer('timer2')">Stop</button>
+            <p id="timer2" class="timer-display">07:00</p>
+            </div>
+            <div class="egg-type">
+            <img src="hard.png" alt="hard boiled egg" class="gallery-image">
+            <p>Hard Boiled--10mins</p>
+            <button class="timer-button" onclick="startTimer(600, 'timer3')">Start Timer</button>
+            <button class="stop-button" onclick="stopTimer('timer3')">Stop</button>
+            <p id="timer3" class="timer-display">10:00</p>
+            </div>
+        </div>
+        <audio id="alarm-sound" src="voice.mp3" preload="auto"></audio>
+        <script>
+            const timerIntervals = {};  // Store each timer separately
+            
+            function startTimer(seconds, timerId) {
+              const display = document.getElementById(timerId);
+              let timeLeft = seconds;
+            
+              // Clear existing timer
+              clearInterval(timerIntervals[timerId]);
+            
+              // Start new timer
+              timerIntervals[timerId] = setInterval(() => {
+                const min = Math.floor(timeLeft / 60);
+                const sec = timeLeft % 60;
+                display.textContent = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+            
+                if (timeLeft === 0) {
+                  clearInterval(timerIntervals[timerId]);
+                  playAlarm();  // Sound function
+                  alert("Your egg is ready! 🍳");
+                }
+            
+                timeLeft--;
+              }, 1000);
+            }
+            
+            function stopTimer(timerId) {
+              clearInterval(timerIntervals[timerId]);
+            }
+            function playAlarm() {
+                const sound = document.getElementById("alarm-sound");
+                sound.play();
+ 
+            }
+            </script>
+
+    </body>
+
+</html>
