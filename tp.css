@@ -1,0 +1,98 @@
+body {
+ background-image: url(bg.jpg);
+ 
+}
+
+h1 {
+  color: blueviolet;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+h2 {
+    color: rgb(186, 0, 249);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+  }
+h4 {
+    color: rgb(250, 0, 175);
+    text-align: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: larger;
+}
+.header-container {
+    display: flex;
+    align-items: center;         /* Vertically align */
+    justify-content: center;     /* Horizontally center */
+    gap: 10px;                   /* Space between image and text */
+    margin-top: 20px;            /* Optional: spacing from top */
+  }
+  
+  /* Image */
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Heading inside the container */
+  .heading {
+    color: blueviolet;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 32px;
+  }
+
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  .gallery-image {
+    width: 400px;              /* Set a fixed width */
+    height: 400px;             /* Set a fixed height */
+       
+  }
+  .egg-type p {
+   color: blueviolet; 
+   font-size: larger;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-weight: bold;
+  }
+  .timer-display {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .timer-button {
+    background-color: rgb(244, 6, 184);
+    border-radius: 30px;
+    color: black;
+    cursor: pointer;                /* Hand cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover */
+  margin-top: 10px;               /* Space from image/text */
+}
+
+.timer-button:hover {
+  background-color: #dbaeef;      /* Darker purple on hover */
+  transform: scale(1.05);         /* Slight zoom effect */
+}
+.stop-button {
+    background-color: rgb(244, 6, 184);
+    border-radius: 30px;
+    color: black;
+    cursor: pointer;                /* Hand cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover */
+  margin-top: 10px; 
+}
+.stop-button:hover{
+    background-color: #dbaeef;      /* Darker purple on hover */
+  transform: scale(1.05);  
+}
+  
